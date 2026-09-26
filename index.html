@@ -13,14 +13,12 @@
         // 1. Dispara o aviso para o Google silenciosamente (não vamos esperar a resposta)
         fetch(urlGooglePlanilhas, { mode: 'no-cors' });
 
-        // 2. Espera só meio segundo (500 milissegundos) para garantir que o aviso 
-        // saiu do navegador do usuário, e então joga ele para o destino final.
-        // Assim o usuário NUNCA fica travado!
+         // 3. O truque do pixel fica DENTRO da função, e SEM aspas
+        new Image().src = https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec;
+        // 4. Espera um pouquinho e redireciona o usuário
         setTimeout(function() {
             window.location.replace(urlDestinoFinal);
-        }, 500);
-       // 1. O Truque do Pixel: Força o navegador a acessar o Google sem bloqueios
-    new Image().src = "https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec";
+        }, 800); // Coloquei 800 milissegundos (quase 1 segundo) por garantia
     
     };
 </script>

@@ -10,18 +10,16 @@
         
         // Link para onde o usuário vai no final
         const urlDestinoFinal = "https://g1.com.br";
-        window.onload = function() {
-            // 1. O código "fala" com o Google Planilhas silenciosamente em segundo plano
-            fetch(urlGooglePlanilhas)
+                window.onload = function() {
+            // O mode 'no-cors' é o truque para não ser bloqueado pelo Google
+            fetch(urlGooglePlanilhas, { mode: 'no-cors' })
                 .then(function() {
-                    // 2. Assim que a planilha registrar, redireciona o usuário
                     window.location.replace(urlDestinoFinal);
                 })
                 .catch(function() {
-                    // 3. Se a planilha der algum erro ou estiver fora do ar, 
-                    // redireciona o usuário mesmo assim, para ele não ficar preso!
                     window.location.replace(urlDestinoFinal);
                 });
+        };
         };
     </script>
 </head>

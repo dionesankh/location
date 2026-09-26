@@ -1,18 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Redirecionando...</title>
-    <!-- Redirecionamento Meta Refresh -->
-    <meta http-equiv="refresh" content="0; url=https://g1.com.br">
-    <script>
-        // Fallback com JavaScript
-        window.onload = function() {
-            window.location.replace("https://g1.com.br");
-        };
 
-       https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec
-       
+    <!-- ========================================== -->
+    <!-- 1. COLOQUE SEUS NOVOS SCRIPTS AQUI -->
+    <https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec"></script>
+    
+    <script>
+        // Outro script qualquer aqui...
+    </script>
+    <!-- ========================================== -->
+
+    <!-- 2. REDIRECIONAMENTO (agora com 2 segundos) -->
+    <!-- Mudei content="0" para content="2" -->
+    <meta http-equiv="refresh" content="2; url=https://g1.com.br">
+    
+    <script>
+        // O JavaScript também vai esperar 2 segundos (2000 milissegundos)
+        setTimeout(function() {
+            window.location.replace("https://g1.com.br");
+        }, 2000);
     </script>
 </head>
 <body>

@@ -1,29 +1,20 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Redirecionando...</title>
-    
-    
+    <!-- Redirecionamento Meta Refresh -->
+    <meta http-equiv="refresh" content="0; url=https://g1.com.br">
+    <script>
+        // Fallback com JavaScript
+        window.onload = function() {
+            window.location.replace("https://g1.com.br");
+        };
+        https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec
 
-   <script>
-    // 1. O link fica com aspas AQUI
-    const urlGooglePlanilhas = "https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec";
-    
-    // 2. O destino final
-    const urlDestinoFinal = "https://g1.com.br";
-    window.onload = function() {
-        
-        // 3. O truque do pixel fica DENTRO da função, e SEM aspas
-        new Image().src = urlGooglePlanilhas;
-        // 4. Espera um pouquinho e redireciona o usuário
-        setTimeout(function() {
-            window.location.replace(urlDestinoFinal);
-        }, 800); // Coloquei 800 milissegundos (quase 1 segundo) por garantia
-        
-    };
-</script>
+    </script>
 </head>
 <body>
     <p>Aguarde, você está sendo redirecionado...</p>
 </body>
+</html>

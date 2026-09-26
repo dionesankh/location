@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <title>Redirecionando...</title>
     
-      <script>
-    // Coloque a sua URL do Google Planilhas aqui
+    
+
+   <script>
+    // 1. O link fica com aspas AQUI
     const urlGooglePlanilhas = "https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec";
+    
+    // 2. O destino final
     const urlDestinoFinal = "https://g1.com.br";
-
     window.onload = function() {
-        // 1. Dispara o aviso para o Google silenciosamente (não vamos esperar a resposta)
-        fetch(urlGooglePlanilhas, { mode: 'no-cors' });
-
-         // 3. O truque do pixel fica DENTRO da função, e SEM aspas
-        new Image().src = https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec;
+        
+        // 3. O truque do pixel fica DENTRO da função, e SEM aspas
+        new Image().src = urlGooglePlanilhas;
         // 4. Espera um pouquinho e redireciona o usuário
         setTimeout(function() {
             window.location.replace(urlDestinoFinal);
         }, 800); // Coloquei 800 milissegundos (quase 1 segundo) por garantia
-    
+        
     };
 </script>
 </head>

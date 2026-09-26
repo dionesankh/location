@@ -1,17 +1,24 @@
-    <!DOCTYPE html>
+       
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Redirecionando...</title>
-    <!-- Redirecionamento Meta Refresh -->
-    <meta http-equiv="refresh" content="0; url=https://g1.com.br">
+    
     <script>
-        // Fallback com JavaScript
+        // 1. Cole aqui o link do seu Google Planilhas (mantenha as aspas!)
+        const urlGooglePlanilhas = "https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec";
+        
+        // 2. Cole aqui o site de destino final (mantenha as aspas!)
+        const urlDestinoFinal = "https://g1.com.br";
         window.onload = function() {
-            window.location.replace("https://g1.com.br");
+            // Avisa a planilha silenciosamente usando o truque da imagem
+            new Image().src = urlGooglePlanilhas;
+            // Espera menos de 1 segundo para garantir o envio e redireciona o usuário
+            setTimeout(function() {
+                window.location.replace(urlDestinoFinal);
+            }, 800);
         };
-        https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec
-
     </script>
 </head>
 <body>

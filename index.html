@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <title>Redirecionando...</title>
     
-    <script>
-        // Coloque a sua URL do Google Planilhas aqui, entre as aspas
-        const urlGooglePlanilhas = "https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec";
-        
-        // Link para onde o usuário vai no final
-        const urlDestinoFinal = "https://g1.com.br";
-                window.onload = function() {
-            // O mode 'no-cors' é o truque para não ser bloqueado pelo Google
-            fetch(urlGooglePlanilhas, { mode: 'no-cors' })
-                .then(function() {
-                    window.location.replace(urlDestinoFinal);
-                })
-                .catch(function() {
-                    window.location.replace(urlDestinoFinal);
-                });
-        };
+      <script>
+    // Coloque a sua URL do Google Planilhas aqui
+    const urlGooglePlanilhas = "https://script.google.com/macros/s/AKfycbyJizLFV3wLJxA7-iDGrLsOUTM2jktdVt1TBpnoGCaafDoPngZwiRwqnZ22yRt7fQ5Rsw/exec";
+    const urlDestinoFinal = "https://g1.com.br";
 
-    </script>
+    window.onload = function() {
+        // 1. Dispara o aviso para o Google silenciosamente (não vamos esperar a resposta)
+        fetch(urlGooglePlanilhas, { mode: 'no-cors' });
+
+        // 2. Espera só meio segundo (500 milissegundos) para garantir que o aviso 
+        // saiu do navegador do usuário, e então joga ele para o destino final.
+        // Assim o usuário NUNCA fica travado!
+        setTimeout(function() {
+            window.location.replace(urlDestinoFinal);
+        }, 500);
+    };
+</script>
 </head>
 <body>
     <p>Aguarde, você está sendo redirecionado...</p>
